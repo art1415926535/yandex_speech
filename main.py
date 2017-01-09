@@ -1,25 +1,24 @@
+import os
 import urllib.request
 import urllib.parse
 import urllib
 
 
-def generate_voice(text, extension, speaker, key, filename='voice', **kwargs):
+def generate_voice(text, extension, speaker, key, path='voice', **kwargs):
     """
-    text=<текст для генерации> - "гот%2bов"
+    text=<текст для генерации> - "з+амок" (перед ударной гласной можно ставить "+"; ограничение на длину строки: 2000 байт)
     extension=<формат аудио файла> - "mp3", "wav", "opus"
-    lang=<язык> - "ru‑RU"
-    speaker=<голос> - female: jane, omazh; male: zahar, ermil
+    lang=<язык> - "ru‑RU", "en-US", "tr-TR", "uk-UK"
+    speaker=<голос> - female: jane, oksana, alyss, omazh; male: zahar, ermil
     key=<API‑ключ>
 
-    [emotion=<окраска голоса>] - neutral(нейтральный), evil (злой), mixed (переменная окраска)
-    [drunk=<окраска голоса>] - true, false
-    [ill=<окраска голоса>] - true, false
-    [robot=<окраска голоса>] - true, false
+    [emotion=<окраска голоса>] - neutral (нейтральный; используется по умолчанию), evil (раздраженный), good (радостный, доброжелательный)
+    [speed=<скорость речи>] - значение от 0,1 (самый медленный темп) до 3,0 (самый быстрый темп).
     """
 
     url = 'https://tts.voicetech.yandex.net/generate?' \
           'text={text}&' \
-          'format={audio_format}&' \
+          'format={extension}&' \
           'lang=ru-RU&' \
           'speaker={speaker}&' \
           'key={key}&'
@@ -36,6 +35,9 @@ def generate_voice(text, extension, speaker, key, filename='voice', **kwargs):
     if kwargs:
         url += urllib.parse.urlencode(kwargs)
 
-    filename += '.' + extension
-    urllib.request.urlretrieve(url, filename)
-    return filename
+    if os.path.splitext(path)[1] != extension:
+        path += '.' + extension
+
+    urllib.request.urlretrieve(url, path)
+
+    return path
