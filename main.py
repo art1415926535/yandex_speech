@@ -3,14 +3,14 @@ import urllib.parse
 import urllib
 
 
-def generate_voice(text, audio_format, speaker, key, file='voice.mp3', **a):
+def generate_voice(text, extension, speaker, key, filename='voice', **kwargs):
     """
     text=<текст для генерации> - "гот%2bов"
-    format=<формат аудио файла> - "mp3", "wav"
+    extension=<формат аудио файла> - "mp3", "wav", "opus"
     lang=<язык> - "ru‑RU"
     speaker=<голос> - female: jane, omazh; male: zahar, ermil
     key=<API‑ключ>
-    
+
     [emotion=<окраска голоса>] - neutral(нейтральный), evil (злой), mixed (переменная окраска)
     [drunk=<окраска голоса>] - true, false
     [ill=<окраска голоса>] - true, false
@@ -33,9 +33,9 @@ def generate_voice(text, audio_format, speaker, key, file='voice.mp3', **a):
         key=key
     )
 
-    if a:
-        url += urllib.parse.urlencode(a)
+    if kwargs:
+        url += urllib.parse.urlencode(kwargs)
 
-    urllib.request.urlretrieve(url, file)
-    return file
-
+    filename += '.' + extension
+    urllib.request.urlretrieve(url, filename)
+    return filename
