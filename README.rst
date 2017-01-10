@@ -6,16 +6,15 @@ Generation of speech using `Yandex SpeechKit
 <https://tech.yandex.ru/speechkit/>`_.
 
 1. Import module
-    ``from yandex_speech_kit import tts``
+    ``from yandex_speech import tts``
 
 2. Call a function
-    ``tts.generate_voice("Привет", "mp3", "ru‑RU", "jane", "60589d42-0e42-b742-8942-thekeyisalie")``
+    ``tts.generate_voice("Привет", "mp3", "jane", "60589d42-0e42-b742-8942-thekeyisalie")``
 
     *Required parameters:*
 
     - ``text`` - Text to speech: "з+амок" (before the stressed vowel can be put "+"; the restriction on line length: 2000 bytes);
     - ``extension`` - Audio file format: "mp3", "wav", "opus";
-    - ``lang`` - Language: "ru‑RU", "en-US", "tr-TR", "uk-UK";
     - ``speaker`` - Speaker
         - female: "jane", "oksana", "alyss", "omazh";
         - male: "zahar", "ermil";
@@ -23,6 +22,7 @@ Generation of speech using `Yandex SpeechKit
 
     *Optional parameters:*
 
+    - ``lang`` - Language: "ru‑RU", "en-US", "tr-TR", "uk-UK";
     - ``path`` - A path to save file: "test", "dirname/test", "test.mp3", "dirname/test.mp3";
     - ``emotion`` - The color of the voice: "neutral" (by default), "evil", "good";
     - ``speed`` - Speech tempo: a value between 0.1 (slowest) to 3.0 (fastest).

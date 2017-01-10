@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 from os.path import join, dirname
-import yandex_speech_kit
+import yandex_speech
 
 
 setup(
-    name="yandex_speech_kit",
+    name="yandex_speech",
     description="A library for Yandex speech kit",
     long_description=open('README.rst').read(),
-    url='https://github.com/art1415926535/Yandex_speech_api',
-    version=yandex_speech_kit.__version__,
+    url='https://github.com/art1415926535/Yandex_speech',
+    version=yandex_speech.__version__,
     packages=find_packages(),
+    install_requires=['requests'],
     license='MIT',
     author='Artem Fedotov',
     author_email = "art1415926535@ya.ru",
