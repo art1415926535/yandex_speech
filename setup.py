@@ -7,7 +7,7 @@ import yandex_speech_kit
 setup(
     name="yandex_speech_kit",
     description="A library for Yandex speech kit",
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     url='https://github.com/art1415926535/Yandex_speech_api',
     version=yandex_speech_kit.__version__,
     packages=find_packages(),
