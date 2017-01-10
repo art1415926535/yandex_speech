@@ -5,10 +5,13 @@ Yandex speech kit for Python
 Generation of speech using `Yandex SpeechKit
 <https://tech.yandex.ru/speechkit/>`_.
 
-1. Import module
+1. Install
+    ``pip install yandex_speech``
+
+2. Import module
     ``from yandex_speech import tts``
 
-2. Call a function
+3. Call a function
     ``tts.generate_voice("Привет", "mp3", "jane", "60589d42-0e42-b742-8942-thekeyisalie")``
 
     *Required parameters:*
