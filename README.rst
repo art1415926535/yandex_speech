@@ -5,32 +5,38 @@ Yandex speech kit for Python
 Generation of speech using `Yandex SpeechKit
 <https://tech.yandex.ru/speechkit/>`_.
 
-1. Install
-    ``pip install yandex_speech``
+Installation
+------------
+Use ``Pip``, Luke
 
-2. Import module
-    ``from yandex_speech import tts``
+.. code-block:: bash
 
-3. Call a function
-    ``tts.generate_voice("Привет", "mp3", "jane", "60589d42-0e42-b742-8942-thekeyisalie")``
+    $ pip install yandex_speech
 
-    *Required parameters:*
+Usage
+-----
+.. code-block:: python
 
-    - ``text`` - Text to speech: "з+амок" (before the stressed vowel can be put "+"; the restriction on line length: 2000 bytes);
-    - ``extension`` - Audio file format: "mp3", "wav", "opus";
-    - ``speaker`` - Speaker
-        - female: "jane", "oksana", "alyss", "omazh";
-        - male: "zahar", "ermil";
-    - ``key`` - `API‑key <https://developer.tech.yandex.ru>`_.
+    from yandex_speech import tts
+    tts.generate_voice("Привет", "mp3", "jane", "60589d42-0e42-b742-8942-thekeyisalie")
 
-    *Optional parameters:*
+*Required parameters:*
 
-    - ``lang`` - Language: "ru‑RU", "en-US", "tr-TR", "uk-UK";
-    - ``path`` - A path to save file: "test", "dirname/test", "test.mp3", "dirname/test.mp3";
-    - ``emotion`` - The color of the voice: "neutral" (by default), "evil", "good";
-    - ``speed`` - Speech tempo: a value between 0.1 (slowest) to 3.0 (fastest).
+- ``text`` - Text to speech: "з+амок" (before the stressed vowel can be put "+"; the restriction on line length: 2000 bytes);
+- ``extension`` - Audio file format: "mp3", "wav", "opus";
+- ``speaker`` - Speaker
+    - female: "jane", "oksana", "alyss", "omazh";
+    - male: "zahar", "ermil";
+- ``key`` - `API‑key <https://developer.tech.yandex.ru>`_.
 
-    Returns the path.
+*Optional parameters:*
+
+- ``lang`` - Language: "ru‑RU", "en-US", "tr-TR", "uk-UK";
+- ``path`` - A path to save file: "test", "dirname/test.mp3", ...;
+- ``emotion`` - The color of the voice: "neutral" (by default), "evil", "good";
+- ``speed`` - Speech tempo: a value between 0.1 (slowest) to 3.0 (fastest).
+
+Returns the path.
 
 References
 ----------
