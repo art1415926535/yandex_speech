@@ -10,7 +10,7 @@ You can choose the voice (male or female), tempo and intonation (e.g., joy).
 .. image:: https://img.shields.io/pypi/v/yandex_speech.svg
     :target: https://pypi.python.org/pypi/yandex_speech
 
-.. image:: https://travis-ci.org/art1415926535/Yandex_speech.svg?branch=master
+.. image:: https://img.shields.io/travis/art1415926535/Yandex_speech.svg
     :target: https://travis-ci.org/art1415926535/Yandex_speech
 
 .. image:: https://landscape.io/github/art1415926535/Yandex_speech/master/landscape.svg?style=flat
