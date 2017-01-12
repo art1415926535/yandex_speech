@@ -1,0 +1,2 @@
+ignore-paths:
+  - yandex_speech\__init__.py
