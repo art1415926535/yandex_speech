@@ -13,7 +13,7 @@ class TTS:
         Args:
             speaker: Speaker.
             audio_format: Audio file format.
-            key: API‑key for Yandex speech kit.
+            key: API-key for Yandex speech kit.
             lang (optional): Language. Defaults to "ru-RU".
             emotion (optional): The color of the voice. Defaults to "normal".
             speed (optional): Speech tempo. Defaults to 1.0.
@@ -56,7 +56,7 @@ class TTS:
         """
 
         if self._data is None:
-            raise Exception("There’s nothing to save")
+            raise Exception("There's nothing to save")
 
         extension = "." + self.__params["format"]
         if os.path.splitext(path)[1] != extension:
