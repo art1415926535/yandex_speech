@@ -7,6 +7,15 @@ Generation of speech using `Yandex SpeechKit
 SpeechKit Cloud allows you to voice any text in Russian or English.
 You can choose the voice (male or female), tempo and intonation (e.g., joy).
 
+.. image:: https://badge.fury.io/py/yandex_speech.svg
+    :target: https://badge.fury.io/py/yandex_speech
+
+.. image:: https://travis-ci.org/art1415926535/Yandex_speech.svg?branch=master
+    :target: https://travis-ci.org/art1415926535/Yandex_speech
+
+.. image:: https://landscape.io/github/art1415926535/Yandex_speech/master/landscape.svg?style=flat
+    :target: https://landscape.io/github/art1415926535/Yandex_speech/master
+
 Installation
 ------------
 Use ``Pip``, Luke
