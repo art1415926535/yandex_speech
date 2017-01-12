@@ -1,20 +1,23 @@
-# -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
-from os.path import join, dirname
-import yandex_speech
+import os
 
+from setuptools import setup
+
+
+NAME = "yandex_speech"
+with open(os.path.join(NAME, "VERSION.txt")) as f:
+    version = f.read().strip()
 
 setup(
-    name="yandex_speech",
+    name=NAME,
     description="A library for Yandex speech kit",
-    long_description=open('README.rst').read(),
-    url='https://github.com/art1415926535/Yandex_speech',
-    version=yandex_speech.__version__,
-    packages=find_packages(),
-    install_requires=['requests'],
-    license='MIT',
-    author='Artem Fedotov',
-    author_email = "art1415926535@ya.ru",
+    long_description=open("README.rst").read(),
+    url="https://github.com/art1415926535/Yandex_speech",
+    version=version,
+    packages=[NAME],
+    install_requires=["requests"],
+    license="MIT",
+    author="Artem Fedotov",
+    author_email="art1415926535@ya.ru",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -25,5 +28,5 @@ setup(
         "Natural Language :: Ukranian",
         "Topic :: Multimedia :: Sound/Audio :: Speech"
     ],
-    keywords='yandex speech kit text-to-speech tts',
+    keywords="yandex speech kit text-to-speech tts",
 )

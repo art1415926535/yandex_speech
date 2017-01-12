@@ -1,0 +1,6 @@
+[flake8]
+exclude = .git,build,dist,__init__.py
+application-import-names = yandex_speech
+ignore = D101
+import-order-style = google
+inline-quotes = "
