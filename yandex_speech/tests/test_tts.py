@@ -5,7 +5,8 @@ import random
 from shutil import rmtree
 import unittest
 
-from yandex_speech.tts import TTS
+from yandex_speech import TTS
+from yandex_speech.tests.config import KEY
 
 
 TEXT = "Привет Яндекс"
@@ -15,12 +16,9 @@ LANGUAGES = ("ru‑RU", "en-US", "tr-TR", "uk-UK")
 EMOTIONS = ("neutral", "evil", "good")
 SPEEDS = (0.1, 1.0, 3.0)
 
-# please don"t use in their projects
-KEY = "secret"
-
 
 class TestInit(unittest.TestCase):
-    """Test TTS init"""
+    """Test initialization."""
 
     def test_init(self):
         tts = TTS(SPEAKERS[0], AUDIO_FORMATS[0], KEY)
@@ -47,7 +45,7 @@ class TestInit(unittest.TestCase):
 
 
 class TestGenerate(unittest.TestCase):
-    """Test tts"""
+    """Test tts."""
 
     def setUp(self):
         self.tts = TTS(SPEAKERS[0], AUDIO_FORMATS[0], KEY)

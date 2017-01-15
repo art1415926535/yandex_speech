@@ -8,7 +8,7 @@ class TTS:
     MAX_CHARS = 2000
 
     def __init__(self, speaker, audio_format, key, lang="ru-RU", **kwargs):
-        """Genarator of speech.
+        """Class for generate of speech.
 
         Args:
             speaker: Speaker.
@@ -22,7 +22,7 @@ class TTS:
             "speaker": speaker,
             "format": audio_format,
             "key": key,
-            "lang": lang
+            "lang": lang,
         }
         self.__params.update(kwargs)
         self._data = None
@@ -49,12 +49,11 @@ class TTS:
 
         Args:
             path (optional): A path to save file. Defaults to "speech".
-            File extension is optional. Absolute path is allowed.
+                File extension is optional. Absolute path is allowed.
 
         Returns:
             The path to the saved file.
         """
-
         if self._data is None:
             raise Exception("There's nothing to save")
 
