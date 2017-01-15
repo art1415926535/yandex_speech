@@ -2,8 +2,10 @@
 import unittest
 
 from yandex_speech import NLU
-from yandex_speech.tests.config import KEY
 
+
+# please don't use in their projects
+KEY = "secret"
 
 TEXTS = {
     "Date": "7 июля 2007 года",

@@ -6,8 +6,10 @@ from shutil import rmtree
 import unittest
 
 from yandex_speech import TTS
-from yandex_speech.tests.config import KEY
 
+
+# please don't use in their projects
+KEY = "secret"
 
 TEXT = "Привет Яндекс"
 SPEAKERS = ("jane", "oksana", "alyss", "omazh", "zahar", "ermil")
