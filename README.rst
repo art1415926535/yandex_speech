@@ -2,10 +2,6 @@
 yandex_speech
 ============================
 
-Generation of speech using `Yandex SpeechKit <https://tech.yandex.ru/speechkit/>`_.
-SpeechKit Cloud allows you to voice any text in Russian or English.
-You can choose the voice (male or female), tempo and intonation (e.g., joy).
-
 .. image:: https://img.shields.io/pypi/v/yandex_speech.svg
     :target: https://pypi.python.org/pypi/yandex_speech
 
@@ -35,6 +31,10 @@ Speech to text (not ready)
 
 Text to speech
 --------------
+Generation of speech using `Yandex SpeechKit <https://tech.yandex.ru/speechkit/>`_.
+SpeechKit Cloud allows you to voice any text in Russian, English, Turkish, or Ukrainian.
+You can choose the voice (male or female), tempo and intonation (e.g., joy).
+
 .. code-block:: python
 
     >>> from yandex_speech import TTS
@@ -74,6 +74,8 @@ References
 
 Natural language understanding
 ------------------------------
+Natural language understanding is a technology that allows you to find certain objects in arbitrary text and mark them.
+
 .. code-block:: python
 
     >>> from yandex_speech import NLU
