@@ -35,7 +35,9 @@ class NLU:
         Args:
             text: Text to parse.
             layers (optional): Special fields. Only one string
-                or iterable object (e.g "Data", ("Data", "Fio"))
+                or iterable object (e.g "Data", ("Data", "Fio")).
+                Only these fields will be returned.
+
 
         Returns:
             The parsed text into a json object.
