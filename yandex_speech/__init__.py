@@ -1,6 +1,7 @@
 import os
 
 from .tts import TTS
+from .nlu import NLU
 
 
 VERSION_PATH = os.path.join(os.path.dirname(__file__), "VERSION.txt")

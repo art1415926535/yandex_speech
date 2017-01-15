@@ -16,7 +16,7 @@ setup(
     version=version,
     packages=[NAME],
     package_data={NAME: ["VERSION.txt"]},
-    install_requires=["requests"],
+    install_requires=["requests", "six"],
     license="MIT",
     author="Artem Fedotov",
     author_email="art1415926535@ya.ru",
