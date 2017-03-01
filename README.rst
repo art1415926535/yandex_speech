@@ -8,8 +8,8 @@ yandex_speech
 .. image:: https://img.shields.io/travis/art1415926535/yandex_speech.svg
     :target: https://travis-ci.org/art1415926535/yandex_speech
 
-.. image:: https://landscape.io/github/art1415926535/Yandex_speech/master/landscape.svg?style=flat
-    :target: https://landscape.io/github/art1415926535/Yandex_speech/master
+.. image:: https://landscape.io/github/art1415926535/yandex_speech/master/landscape.svg?style=flat
+    :target: https://landscape.io/github/art1415926535/yandex_speech/master
 
 Installation
 ------------

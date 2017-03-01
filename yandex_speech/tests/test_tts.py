@@ -8,7 +8,6 @@ import unittest
 from yandex_speech import TTS
 
 
-# please don't use in their projects
 KEY = "secret"
 
 TEXT = "Привет Яндекс"

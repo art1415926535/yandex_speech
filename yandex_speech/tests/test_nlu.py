@@ -4,7 +4,6 @@ import unittest
 from yandex_speech import NLU
 
 
-# please don't use in their projects
 KEY = "secret"
 
 TEXTS = {
